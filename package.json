@@ -8,8 +8,7 @@
     "build": "webpack --config webpack.config.js --mode production"
   },
   "dependencies": {
-    "@google-cloud/functions-framework": "^3.0.0",
-    "webpack-node-externals": "^3.0.0"
+    "@google-cloud/functions-framework": "^3.0.0"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^11.0.0",
