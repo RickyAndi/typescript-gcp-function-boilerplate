@@ -1,5 +1,13 @@
 #!/bin/bash
 
+if [ "$1" == "--help" ]; then
+  echo "To deploy all route type './deploy.sh all'"
+  echo "To deploy individual route / event handler, type ./deploy.sh [name]"
+  echo "List of route handler : index, hello"
+  echo "List of event handler : onTestMessage"
+  exit 1;
+fi
+
 if [ "$1" = "all" ] || [ "$1" = "hello" ]; then
   echo "deploying hello route"
   gcloud functions deploy hello \
