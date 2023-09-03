@@ -4,8 +4,9 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   mode: 'production',
   entry: {
-    'hello/index': './src/routes/hello/index.ts',
-    'index/index': './src/routes/index/index.ts',
+    'routes/hello/index': './src/routes/hello/index.ts',
+    'routes/index/index': './src/routes/index/index.ts',
+    'events/onTestMessage/index': './src/routes/index/index.ts',
   },
   target: 'node',
   output: {
@@ -30,11 +31,15 @@ module.exports = {
       patterns: [
         {
           from: 'src/routes/hello/package.json',
-          to: 'hello/package.json',
+          to: 'routes/hello/package.json',
         },
         {
           from: 'src/routes/index/package.json',
-          to: 'index/package.json',
+          to: 'routes/index/package.json',
+        },
+        {
+          from: 'src/routes/index/package.json',
+          to: 'routes/index/package.json',
         },
       ],
     }),
