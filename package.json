@@ -1,0 +1,23 @@
+{
+  "name": "gcloud-function",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --config webpack.config.js",
+    "build": "webpack --config webpack.config.js --mode production"
+  },
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.0.0",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "ts-loader": "^9.2.3",
+    "typescript": "^4.5.2",
+    "webpack": "^5.57.1",
+    "webpack-cli": "^4.8.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
