@@ -1,18 +1,17 @@
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-//const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
-  mode: 'production', // Change to 'production' for production build
+  mode: 'production',
   entry: {
-    'hello/index': './src/routes/hello/index.ts', // Entry point for the hello route
-    'index/index': './src/routes/index/index.ts', // Entry point for the index route
+    'hello/index': './src/routes/hello/index.ts',
+    'index/index': './src/routes/index/index.ts',
   },
   target: 'node',
   output: {
     libraryTarget: 'commonjs2',
     filename: '[name].js',
-    path: path.resolve(__dirname, 'dist'), // Output directory is a common 'dist' folder,
+    path: path.resolve(__dirname, 'dist'),
   },
   resolve: {
     extensions: ['.ts'],
@@ -26,9 +25,7 @@ module.exports = {
       },
     ],
   },
-  //externals: [nodeExternals()],
   plugins: [
-    // Copy package.json from src/routes/hello to dist/hello
     new CopyWebpackPlugin({
       patterns: [
         {
